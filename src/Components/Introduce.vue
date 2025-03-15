@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center z-50">
         <h1 class="text-white transition text-xl italic">{{ text }} <span id="space">{{ icon }}</span></h1>
     </div>
 </template>
