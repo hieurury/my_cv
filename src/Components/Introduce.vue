@@ -1,6 +1,7 @@
 <template>
     <div class="flex justify-center items-center z-50">
-        <h1 class="text-white transition text-xl italic">{{ text }} <span id="space">{{ icon }}</span></h1>
+        <h1 class="text-white transition text-xl italic">{{ text }}</h1>
+        <span id="space" :class="`text-xl ${setAnimation}`">{{ icon }}</span>
     </div>
 </template>
 
@@ -8,8 +9,8 @@
 import { ref } from 'vue'
     const says = ref([
             "My full name is Vo Minh Hieu",
-            "I'm a web developer",
             "I'm a web designer",
+            "I'm a web developer",
             "I'm studying at Can Tho University",
             "I like to learn new things",
     ])
@@ -23,32 +24,57 @@ import { ref } from 'vue'
     const randomText = ref(getRandomText(says.value).split(''));
     const text = ref('');
     const icon = ref("✏️");
-    let isRun = true;
-   function startInterval(data) {
-       const setText = setInterval(() => {
-            if(data.length > 0 && isRun) {
+    const setAnimation = ref("write");
+   function writeInterval(data) {
+        icon.value = "✏️";
+        setAnimation.value = "write";
+        let setText = setInterval(() => {
+            if(data.length > 0) {
                 text.value += `${data[0]}`;
                 data.shift();
-            } else if(data.length === 0 && isRun) {
+            } else {
+                clearInterval(setText);
+                setAnimation.value = "no-animation";
                 setTimeout(() => {
-                    isRun = false
-                }, 1000)
-            } else if(!isRun) {
-                icon.value = "📍";
-                text.value = text.value.slice(0, -1);
-                if(text.value.length === 0) {
-                    clearInterval(setText);
-                    data = getRandomText(says.value).split('');
-                    isRun = true;
-                    icon.value = "✏️";
-                    startInterval(data);
-                }
+                    deleteInterval();
+                }, 1000);
             }
     }, 50);
    }
-    startInterval(randomText.value);
+   function deleteInterval() {
+        icon.value = "📍";
+        let clearText = setInterval(() => {
+            if(text.value.length > 0) {
+                text.value = text.value.slice(0, -1);
+            } else {
+                clearInterval(clearText);
+                randomText.value = getRandomText(says.value).split('');
+                writeInterval(randomText.value);
+            }
+    }, 50);
+    }
+    writeInterval(randomText.value);
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="css" scoped>
+    .write {
+        animation: move .5s infinite;
+    }
+    .no-animation {
+        animation: none;
+    }
+    @keyframes move {
+        0% {
+            transform: translateY(0);
+        }
+        25% {
+            transform: translateY(-5px);
+        }
+        50% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(5px);
+        }
+    }
 </style>
