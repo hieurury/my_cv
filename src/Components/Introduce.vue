@@ -1,7 +1,9 @@
 <template>
     <div class="flex justify-center items-center z-50">
-        <h1 class="text-white transition text-xl italic">{{ text }}</h1>
-        <span id="space" :class="`text-xl ${setAnimation}`">{{ icon }}</span>
+        <h1 class="text-white transition inline-block text-xl italic">{{ text }}
+            <span id="space" :class="`text-xl inline-block ${setAnimation}`">{{ icon }}</span>
+        </h1>
+        
     </div>
 </template>
 
