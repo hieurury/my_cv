@@ -15,7 +15,7 @@
             </li>
         </nav>
     </header>
-    <router-view class="bg-black min-h-screen p-4">
+    <router-view>
     </router-view>
 </template>
 

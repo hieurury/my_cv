@@ -1,5 +1,5 @@
 <template>
-    <div class="container px-16 text-white relative">
+    <div class="container px-16 text-white relative bg-black min-h-screen">
 
         <div class="flex justify-center items-center flex-col text-center">
             <Avatar url="/imgs/avatar-catoon.jpg" size="16"/>
@@ -23,6 +23,15 @@
                         <img class="w-8 h-8 rounded-full" src="/imgs/github.svg" alt="">
                     </a>
                 </li>
+                <li class="mx-4 sepia-50 hover:sepia-0">
+                    <a href="mailto:hieurury007@gmail.com">
+                        <img class="w-8 h-8 rounded-full" src="/imgs/gmail.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <!-- address and country -->
+            <ul class="flex justify-between items-center z-50 mt-8 py-1 px-6">
+                
             </ul>
         </div>
     </div>
