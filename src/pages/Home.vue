@@ -94,24 +94,25 @@
 
 
         <!-- *project -->
-         <div id="project" class="lg:h-screen lg:snap-start">
-            <div class="h-screen snap-start">
+         <div id="project" class="lg:h-screen lg:snap-start p-12">
+            <div class="h-full w-full">
                 <Carousel :data="[
                     {
-                        title: 'Project 1',
-                        description: 'Description 1',
-                        img: '/imgs/CTU.jpg'
+                        title: 'Website Truyện tranh',
+                        description: 'Website đọc truyện tranhh miễn phí sử dụng API được cung cung cấp sẵn. sử dụng HTML5, CSS3, Bootstrap5 và JavaScript EJ6 kết hợp với React. Áp dụng các kiến thức về Fetch API, Promise cũng như xử lí dữ liệu Object để hoàn thành dự án. Tuy nhiên một số chức năng vẫn chưa hoàn tất và cần thời gian để nâng cấp!',
+                        pattern: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+                        img: '/imgs/rury_comics.jpg',
+                        duration: '5days',
+                        link: 'https://hieurury.github.io/rury_comics'
                     },
                     {
-                        title: 'Project 2',
-                        description: 'Description 2',
-                        img: '/imgs/CTU.jpg'
+                        title: 'Sáng tạo Blog cùng Rury Comunity',
+                        description: 'Website viết các Blog và tương tác xã hội với nhiều tính năng soạn thảo được tích hợp sẵn. Sử dụng thư viện giúp soạn thảo văn bản nổi tiếng CKeditor giúp việc soạn thảo trở nên trơn chu hơn. Sử dụng các công nghệ như NodeJs, Express, Handlebars, Tailwindcss đi cùng với MongoDB. Ngoài ra trang web cũng tích hợp JWT - Json Web Token để bảo mật thông tin người dùng.',
+                        pattern: ['NodeJs', 'Express', 'Tailwind', 'MongoDB'],
+                        img: '/imgs/rury_comunity.jpg',
+                        duration: 'Comming soon',
+                        link: 'https://github.com/hieurury/rury_community'
                     },
-                    {
-                        title: 'Project 3',
-                        description: 'Description 3',
-                        img: '/imgs/CTU.jpg'
-                    }
                 ]"/>
             </div>
          </div>

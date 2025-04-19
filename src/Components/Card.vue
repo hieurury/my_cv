@@ -1,8 +1,6 @@
 <template>
     <div>
-        <h3>{{ data.title }}</h3>
-        <p>{{ data.description }}</p>
-        <img :src="data.img" alt="">
+        
     </div>
 </template>
 
@@ -14,6 +12,6 @@ const props = defineProps({
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 
 </style>
