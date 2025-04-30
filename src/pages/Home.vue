@@ -94,7 +94,7 @@
 
 
         <!-- *project -->
-         <div id="project" class="lg:h-screen lg:snap-start p-12">
+         <div id="project" class="lg:h-screen lg:snap-start lg:p-12 h-screen snap-start">
             <div class="h-full w-full">
                 <Carousel :data="[
                     {
