@@ -19,15 +19,7 @@
         <section class="flex flex-col items-center justify-center">
             <DotLottieVue class="w-72 h-72 lg:h-44 lg:w-44" autoplay loop :src="lottie" />
             <!-- <img class="w-20 scale-img rotate-img" :src="img" alt=""> -->
-            <a :href="link" type="button"
-                class="cursor-pointer mt-6 z-30 text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2">
-                <span>Show more</span>
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 12H5m14 0-4 4m4-4-4-4" />
-                </svg>
-            </a>
+            
         </section>
     </div>
     <span class="border-b w-full border-fade-left mt-2"></span>

@@ -5,13 +5,13 @@
          text-amber-50 list-none font-semibold
          border-b-white border-b px-16 py-4">
             <li class="mx-4">
-                <router-link to="/">Home</router-link>
+                <a href="#process">Experence</a>
             </li>
             <li class="mx-4">
-                <router-link to="/about">About</router-link>
+                <a href="#project">Project</a>
             </li>
             <li class="mx-4">
-                <router-link to="/contact">Contact</router-link>
+                <a href="#favorite">Favorite</a>
             </li>
         </nav>
     </header>

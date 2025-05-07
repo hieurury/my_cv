@@ -96,6 +96,7 @@
         <!-- *project -->
          <div id="project" class="lg:h-screen lg:snap-start lg:p-12 h-screen snap-start">
             <div class="h-full w-full">
+                <h1 class="lg:text-4xl text-2xl font-bold italic m-2 uppercase border-b border-slate-300 py-2 inline-block px-4 tracking-wide">Các dự án của tôi</h1>
                 <Carousel :data="[
                     {
                         title: 'Website Truyện tranh',
@@ -113,7 +114,38 @@
                         duration: 'Comming soon',
                         link: 'https://github.com/hieurury/rury_community'
                     },
+                    {
+                        title: 'Xem phim hấp dẫn cùng Rury Movie',
+                        description: 'Website xem phim miễn phí với nhiều thể loại khác nhau. Sử dụng API được cung cấp sẵn. Sử dụng HTML5, CSS3, Bootstrap5 và JavaScript EJ6 kết hợp với React. Áp dụng các kiến thức về Fetch API, Promise cũng như xử lí dữ liệu Object để hoàn thành dự án. Tuy nhiên một số chức năng vẫn chưa hoàn tất và cần thời gian để nâng cấp!',
+                        pattern: ['HTML5', 'CSS3', 'JavaScript'],
+                        img: '/imgs/rury_movies.jpg',
+                        duration: 'Comming soon',
+                        link: 'https://github.com/hieurury/rury_community'
+                    },
                 ]"/>
+            </div>
+         </div>
+
+
+         <!--* Favorite -->
+         <div id="favorite" class="lg:h-screen lg:snap-start lg:p-12 h-screen snap-start">
+             <div class="h-full w-full flex lg:flex-row flex-col justify-center items-center">
+                <h1 class="lg:text-4xl text-2xl font-bold italic m-2 uppercase border-b border-slate-300 py-2 inline-block px-4 tracking-wide">Sở thích của tôi</h1>
+                <Card 
+                    img="/imgs/coding.jpg"
+                    title="coding"
+                    description="Tôi thích lập trình, Coding ở mọi nơi, hầu hết thời gian rảnh tôi điều dành thời gian cho việc lập trình, đôi khi nó chỉ là những dòng code nhỏ và cẩu thả nhưng đó là thứ giúp tôi thư giãn vì được làm thứ mình yêu thích. Tôi hay lên ý tưởng và lập trình những thứ mình gặp dù đôi lúc nó không liên quan lắm."
+                />
+                <Card 
+                    img="/imgs/design.jpg"
+                    title="design"
+                    description="Tôi cũng rất thích thiết kế các sản phẩm, giao diện và những cấu trúc theo những cách riêng. Đôi khi tôi cũng sáng tạo lại các ý tưởng đâu đó mà tôi tìm thấy trên Internet!"
+                />
+                <Card 
+                    img="/imgs/gaming.png"
+                    title="game"
+                    description="Chơi game cũng là một sở thích của tôi, đôi lúc nó mang đến cho tôi nhiều ý tưởng cũng như những cách nhìn nhận mới mẽ hơn về mặt lập trình. Tôi cũng khá hứng thú với việc Mod game và lập trình Game!"
+                />
             </div>
          </div>
     </div>
@@ -128,6 +160,9 @@
 </script>
 
 <style lang="css" scoped>
+    body {
+        scroll-behavior: smooth;
+    }
     /* Hide scrollbar for WebKit browsers */
     .no-scrollbar::-webkit-scrollbar {
         display: none;
